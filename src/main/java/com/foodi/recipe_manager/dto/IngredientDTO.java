@@ -3,26 +3,18 @@ package com.foodi.recipe_manager.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
-import lombok.Getter;
+import lombok.*;
 
-@Getter
+@Value
+@Builder
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class IngredientDTO {
-
     @NotBlank
-    private final String name;
-
+    String name;
     @NotNull
     @Positive
-    private final String quantity;
-
+    String quantity;
     @NotBlank
-    private final String unit;
-
-    public IngredientDTO(String name, String quantity, String unit) {
-        this.name = name;
-        this.quantity = quantity;
-        this.unit = unit;
-    }
-
+    String unit;
 }
 
