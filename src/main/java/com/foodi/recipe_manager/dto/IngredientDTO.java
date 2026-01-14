@@ -13,12 +13,12 @@ public class IngredientDTO {
 
     @NotNull
     @Positive
-    private final Double quantity;
+    private final String quantity;
 
     @NotBlank
     private final String unit;
 
-    public IngredientDTO(String name, Double quantity, String unit) {
+    public IngredientDTO(String name, String quantity, String unit) {
         this.name = name;
         this.quantity = quantity;
         this.unit = unit;
